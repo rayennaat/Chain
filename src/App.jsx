@@ -7,7 +7,7 @@ import Web3 from './pages/web3';
 import Demo from './pages/demo';
 import Connect from './pages/connect';
 
-const basename = import.meta.env.DEV ? '/' : '/ChainLab';
+const basename = window.location.pathname.startsWith('/ChainLab') ? '/ChainLab' : '/';
 
 const routes= (
   <Router basename={basename}>
